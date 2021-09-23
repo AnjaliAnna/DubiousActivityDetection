@@ -34,4 +34,4 @@ College of Engineering Trivandrum
 1. Amal Shoji
 1. Anjali Anna Peter (<anjaliannapeter4@cet.ac.in>)
 1. Dona Maria
-1. Sachin Dharanikkavil
+1. Sachin Dharanikkavil (<sachindk52@gmail.com>)
