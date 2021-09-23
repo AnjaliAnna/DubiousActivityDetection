@@ -30,7 +30,7 @@ College of Engineering Trivandrum
 
 ### Submitted By
 
-1. Abdulla Murshid KV
+1. Abdulla Murshid KV (abdullamurshidkv@gmail.com)
 1. Amal Shoji
 1. Anjali Anna Peter (<anjaliannapeter4@cet.ac.in>)
 1. Dona Maria
