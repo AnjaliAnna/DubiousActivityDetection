@@ -32,10 +32,10 @@ for i in range(0, len(files)):
         if not ret:
             break  # if no more frame to read
 
-        if frameId % math.floor(frameRate) == 0:
+        if frameId % math.floor(frameRate) == 0:  # what?
             filename = "image/image%d.jpg" % count  # file path of frame to be stored
             count += 1
-            cv2.imwrite(filename, frame)  # imwrite() saves images in specified path
-    capt.release()
+            cv2.imwrite(filename, frame)  # im write() saves images in specified path
+    capt.release()  # closes video file
 
 print("Data Extraction Done!")
