@@ -5,11 +5,11 @@
 Every household, organization and government around the world today, employs some form
 of video surveillance technology to enhance security. The footage generated from these closed
 circuit cameras can be used for analysing suspicious crowd behaviour in public places.
-This should be done due to it's potentially harmful nature which could at worse escalate to life threatening scenarios.
+This should be done due to its potentially harmful nature which could at worse escalate to life-threatening scenarios.
 
 This project becomes relevant with the
-increase in antisocial activities on a day to day basis. It also eases the workload on humans since
-automated monitoring of footage is much more easier and efficient than when manually done.
+increase in antisocial activities on a day-to-day basis. It also eases the workload on humans since
+automated monitoring of footage is much easier and efficient than when manually done.
 It could also drastically reduce the workforce necessary for such a task thus justifying the need
 to automate the same.This
 project proposes an approach to analyse crowds and identify suspicious activities of moving
