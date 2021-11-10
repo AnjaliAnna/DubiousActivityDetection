@@ -1,4 +1,5 @@
-# importing modules
+# put a video as input and extract from it a frame every second keeping the original size and saving all the frames
+# into a folder
 import cv2.cv2 as cv2  # opencv for image processing
 import math  # math module defines mathematical functions like trig log etc
 import os  # contains functions for creating and removing directories fetching contents etc
@@ -17,18 +18,23 @@ for i in range(0, len(files)):
     videoFile = 'video/input/' + str(files[i])
     # print(videoFile)  videoFile contains path to video files in input folder
     # ie. video/input/safe9.mpg  video/input/safe8.mpg etc
-    cap = cv2.VideoCapture(videoFile)
-    frameRate = cap.get(5)
+    capt = cv2.VideoCapture(videoFile)  # captures video file in given path
+    frameRate = capt.get(5)
     x = 1
-    while cap.isOpened():
-        frameId = cap.get(1)
-        ret, frame = cap.read()
+    while capt.isOpened():
+        frameId = capt.get(1)  # get() method reads metadata of video
+        # get(1) returns the current frame number
+        ret, frame = capt.read()
+        # read() method is used inside the loop to read one frame at a time from the video stream
+        # read() returns a tuple of two values
+        # ret stores the boolean returned ie true if there is a frame false otherwise
+        # frame stores the actual video frame
         if not ret:
-            break
+            break # if no more frame to read
         if frameId % math.floor(frameRate) == 0:
             filename = "image/image%d.jpg" % count
             count += 1
             cv2.imwrite(filename, frame)
-    cap.release()
+    capt.release()
 
 print("Done!")
