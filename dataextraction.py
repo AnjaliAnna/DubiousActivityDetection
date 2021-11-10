@@ -3,7 +3,7 @@ import cv2.cv2 as cv2  # opencv for image processing
 import math  # math module defines mathematical functions like trig log etc
 import os  # contains functions for creating and removing directories fetching contents etc
 
-path = "G:/miniproject/dad/DubiousActivityDetection/video/input"
+path = "video/input"
 files = []
 for f in os.listdir(path):
     # listdir() returns list of all files in specified directory ie. input
@@ -15,7 +15,8 @@ for f in os.listdir(path):
 count = 0
 for i in range(0, len(files)):
     videoFile = 'video/input/' + str(files[i])
-    # print(videoFile)  videoFile contains path to video files
+    # print(videoFile)  videoFile contains path to video files in input folder
+    # ie. video/input/safe9.mpg  video/input/safe8.mpg etc
     cap = cv2.VideoCapture(videoFile)
     frameRate = cap.get(5)
     x = 1
@@ -30,4 +31,4 @@ for i in range(0, len(files)):
             cv2.imwrite(filename, frame)
     cap.release()
 
-    print("Done!")
+print("Done!")
