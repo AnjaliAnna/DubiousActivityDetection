@@ -12,3 +12,4 @@ from skimage.transform import resize
 data = pd.read_csv(image.csv)
 print(data.head(5))
 x = []
+print("hello")
