@@ -9,7 +9,7 @@ import numpy as np
 from keras.utils import np_utils
 from skimage.transform import resize
 
-data = pd.read_csv(image.csv)
-print(data.head(5))
+dataf = pd.read_csv(image.csv) #imports a csv file to dataframe format
+print(dataf.head(5))
 x = []
 print("hello")
