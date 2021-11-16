@@ -1,9 +1,9 @@
 # preprocessing and training
 import cv2  # computer vision library for image processing
-import math
-import matplotlib.pyplot as plt
-import pandas as pd
-import tensorflow as tf
+import math 
+import matplotlib.pyplot as plt # for plotting or plot generation
+import pandas as pd # allows importing data from various file formats like csv
+import tensorflow as tf # for building model
 from keras.preprocessing import image
 import numpy as np
 from keras.utils import np_utils
