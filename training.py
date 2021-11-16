@@ -9,7 +9,12 @@ import numpy as np  # library with tools supporting large multi dimensional arra
 from keras.utils import np_utils
 from skimage.transform import resize
 
-dataf = pd.read_csv(image.csv)  # imports a csv file to dataframe format
+dataf = pd.read_csv('train_img.csv')  # imports a csv file to dataframe format
 print(dataf.head(5))
 x = []
-print("hello")
+for img_name in dataf.Image_ID:
+    img=plt.imread('image/'+img_name+'.jpg',0)
+    x.append(img)
+
+x=np.array(x)
+print(x.shape)
