@@ -13,10 +13,10 @@ from skimage.transform import resize  # skimage is collection of algos for image
 # resize returns resized version of the input image
 
 dataf = pd.read_csv('train_img.csv')  # imports a csv file to dataframe format
-print(dataf.head(5))
-X = []
+# print(dataf.head(5))
+X = [] #x array
 for img_name in dataf.Image_ID:
-    img = plt.imread('image/' + img_name + '.jpg', 0)
+    img = plt.imread('image/' + img_name + '.jpg', 0)  # reads image from file into an array
     X.append(img)  # storing each image in x array
 
 X = np.array(X)  # converting list to array
@@ -33,7 +33,7 @@ X = np.array(image)
 
 from keras.applications.vgg16 import preprocess_input
 
-X = preprocess_input(X, node='tf')
+X = preprocess_input(X, mode='tf')
 
 from sklearn.model_selection import train_test_split
 
