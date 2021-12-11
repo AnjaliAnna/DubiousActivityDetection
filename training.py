@@ -28,5 +28,20 @@ X = np.array(image)
 
 # preprocessing
 
+from keras.applications.vgg16 import preprocess_input
+X=preprocess_input(X,node='tf')
+
 from sklearn.model_selection import train_test_split
-X_train, X_valid = train_test_split(X, dummy_y, test_size=0.3, random_state=42)
+X_train, X_valid, y_train, y_valid= train_test_split(X,dummy_y,test_size=0.3,random_state=42) #preparing validation set
+
+from keras.models import Sequential
+from keras.applications.vgg16 import VGG16
+from keras.layers import Dense, InputLayer, Dropout
+base_model=VGG16(weights='imagenet',include_top=False,input_shape=(224,224,3)) #include top=false to remove the top layer
+
+X_train=base_model.predict(X_train)
+X_valid=base_model.predict(X_valid)
+
+
+#model building
+model=Sequential()
